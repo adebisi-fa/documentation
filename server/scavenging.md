@@ -28,7 +28,7 @@ You start a scavenge by issuing an empty `POST` request to the HTTP API with the
 [!code-bash[server-scavenge-request](~/code-examples/server/scavenge.sh?start=1&end=1)]
 
 > [!NEXT]
-> Scavenge operations have other options you can set to improve performance, [read the API docs](#eventstore_org_HTTP_API_5_0_0_Scavenge_a_node) for more details.
+> Scavenge operations have other options you can set to improve performance, [read the API docs](xref:eventstore.org%2FHTTP%20API%2F5.0.0%2FScavenge%20a%20node) for more details.
 
 ### [Response](#tab/tabid-9)
 
@@ -37,7 +37,7 @@ You start a scavenge by issuing an empty `POST` request to the HTTP API with the
 * * *
 
 > [!NEXT]
-> For better scavenge performance, you can set the number of threads to use. If you need to restart a stopped scavenge, you can specify the starting chunk ID. [Find out more in the API reference](/http-api/swagger/Admin/Scavenge%20a%20node.html).
+> For better scavenge performance, you can set the number of threads to use. If you need to restart a stopped scavenge, you can specify the starting chunk ID. [Find out more in the API reference](xref:eventstore.org%2FHTTP%20API%2F5.0.0%2FScavenge%20a%20node).
 
 You can also start scavenges from the _Admin_ page of the Admin UI.
 
