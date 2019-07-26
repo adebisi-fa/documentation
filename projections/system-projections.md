@@ -45,7 +45,9 @@ The first parameter specifies how the separator is used, and the possible values
 
 For example, if the body of the projection is `first` and `-`, for a stream id of `account-1`, the stream name the projection creates is `$ce-account`.
 
-If the body of the projection is last and `-`, for a stream id of `shopping-cart-1`, the stream name the projection creates is `$ce-shopping-cart`.
+If the body of the projection is `last` and `-`, for a stream id of `shopping-cart-1`, the stream name the projection creates is `$ce-shopping-cart`.
+
+The use case of this project is subscribing to all events within a category.
 
 ## By Event Type
 
@@ -76,9 +78,11 @@ By default the `$stream_by_category` projection links existing events from a str
 
 The first parameter specifies how the separator is used, and the possible values for that parameter is `first` or `last`. The second parameter is the separator, and can be any character.
 
-For example, if the body of the projection is `first` and `-`, for a stream id of `account-1`, the stream name the projection creates is `$category-account`.
+For example, if the body of the projection is `first` and `-`, for a stream id of `account-1`, the stream name the projection creates is `$category-account`, and the `account-1` stream is linked to it. Future streams prefixed with `account-` are likewise linked to the newly created `$category-account` stream.
 
-If the body of the projection is last and `-`, for a stream id of `shopping-cart-1`, the stream name the projection creates is `$category-shopping-cart`.
+If the body of the projection is last and `-`, for a stream id of `shopping-cart-1`, the stream name the projection creates is `$category-shopping-cart`, and the `shopping-cart-1` stream is linked to it.  Future streams whose left-side split by the __last__ '-' is `shopping-cart`, are likewise linked to the newly created `$category-shopping-cart` stream.
+
+The use case of this projection is subscribing to all stream instances of a category.
 
 ## Streams
 
